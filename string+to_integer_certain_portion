@@ -1,0 +1,124 @@
+/*
+Bismillah hir rahmanir rahim
+*/
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    long long tt;
+    cin>>tt;
+    for(int i=1;i<=tt;i++)
+    {
+       string s1,s2,s3,s4;
+       cin>>s1>>s2>>s3>>s4;
+       int fhpos1=0,ehpos1=1,fmpos1=3,empos1=4;
+       string substringh = s1.substr(fhpos1,ehpos1+1 - fhpos1);
+       int timeh1=stoi(substringh);
+       string substringm = s1.substr(fmpos1,empos1+1 - fmpos1);
+       int timem1=stoi(substringm);
+       int fhpos2=0,ehpos2=1,fmpos2=3,empos2=4;
+       string substringh2 = s2.substr(fhpos2,ehpos2+1 - fhpos2);
+       int timeh2=stoi(substringh2);
+       string substringm2 = s2.substr(fmpos2,empos2+1 - fmpos2);
+       int timem2=stoi(substringm2);
+       ///
+       int fhpos3=0,ehpos3=1,fmpos3=3,empos3=4;
+       string substringh3 = s3.substr(fhpos3,ehpos3+1 - fhpos3);
+       int timeh3=stoi(substringh3);
+       string substringm3 = s3.substr(fmpos3,empos3+1 - fmpos3);
+       int timem3=stoi(substringm3);
+       int fhpos4=0,ehpos4=1,fmpos4=3,empos4=4;
+       string substringh4 = s4.substr(fhpos4,ehpos4+1 - fhpos4);
+       int timeh4=stoi(substringh4);
+       string substringm4 = s4.substr(fmpos4,empos4+1 - fmpos4);
+       int timem4=stoi(substringm4);
+       /*
+       if(timeh1>12)
+       {
+           timeh1=timeh1-12;
+       }
+       else if(timeh1<12)
+       {
+           timeh1=timeh1+12;
+       }
+       if(timeh2>12)
+       {
+           timeh2=timeh2-12;
+       }
+       else if(timeh2<12)
+       {
+           timeh2=timeh2+12;
+       }
+       if(timeh3>12)
+       {
+           timeh3=timeh3-12;
+       }
+       else if(timeh3<12)
+       {
+           timeh3=timeh3+12;
+       }
+       if(timeh4>12)
+       {
+           timeh4=timeh4-12;
+       }
+       else if(timeh4<12)
+       {
+           timeh4=timeh4+12;
+       }
+       /*
+       cout<<"HOUR1 :"<<timeh1<<" "<<"Minute1 :"<<timem1<<endl;
+       cout<<"HOUR2 :"<<timeh2<<" "<<"Minute2 :"<<timem2<<endl;
+       cout<<"HOUR3 :"<<timeh3<<" "<<"Minute3 :"<<timem3<<endl;
+       cout<<"HOUR4 :"<<timeh4<<" "<<"Minute4 :"<<timem4<<endl;
+
+
+       if((timeh2<timeh3) || ((timeh2==timeh3) && timem2<timem3))
+       {
+           if((timeh1>timeh4) || ((timeh1==timeh4) && timem1>timem4))
+           {
+               cout<<"Case "<<i<<":"<<" Hits Meeting"<<endl;
+           }
+           else
+           {
+                cout<<"Case "<<i<<":"<<" Mrs Meeting"<<endl;
+           }
+       }
+       /*
+       else if(timeh1==timeh2 && timeh3==timeh4)
+       {
+           if(timem1<timem2 && timem3<timem4)
+           {
+                cout<<"Case "<<i<<":"<<" Hits Meeting"<<endl;
+           }
+           else
+           {
+               cout<<"Case "<<i<<":"<<" Mrs Meeting"<<endl;
+           }
+       }
+
+       else
+       {
+         cout<<"Case "<<i<<":"<<" Mrs Meeting"<<endl;
+       }
+
+        */
+
+        timeh1=timeh1*60+timem1;
+        timeh2=timeh2*60+timem2;
+        timeh3=timeh3*60+timem3;
+        timeh4=timeh4*60+timem4;
+        if((timeh3>timeh2) || (timeh1>timeh4))
+        {
+             cout<<"Case "<<i<<":"<<" Hits Meeting"<<endl;
+        }
+        else
+        {
+            cout<<"Case "<<i<<":"<<" Mrs Meeting"<<endl;
+        }
+
+
+
+
+    }
+    return 0;
+}
